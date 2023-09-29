@@ -24,6 +24,10 @@
     max-width: 350px;
   }
   &__img {
+    img {
+      max-width: 684px;
+      max-height: 690px;
+    }
     @include tablet {
       height: 300px;
       img {
