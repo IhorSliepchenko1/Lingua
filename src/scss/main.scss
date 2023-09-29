@@ -1,8 +1,25 @@
-/* Base */
-@import "./base/reset";
-@import "./base/vars";
-@import "./base/base";
-@import "./base/containers";
+// vendors
+@import 'vendors/reset';
 
-/* Blocks */
-@import "./blocks/*.scss";
+// utils
+@import 'utils/vars';
+@import 'utils/mixins';
+@import 'utils/fonts';
+
+// layout
+@import 'layout/base';
+@import 'layout/scroll';
+
+@import 'layout/grid';
+
+// components
+
+@import 'components/btn';
+
+
+@import 'components/header';
+@import 'components/footer';
+
+
+@import 'components/welcome';
+@import 'components/values';
