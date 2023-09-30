@@ -1,0 +1,22 @@
+#prev {
+  position: absolute;
+  left: 1150px;
+  display: flex;
+  width: 56px;
+  height: 56px;
+  padding: 15.556px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background: red;
+  border-radius: 50%;
+}
+
+.teachers__swiper-btn {
+  position: relative;
+  display: grid;
+  text-align: right;
+}
+
+.swiper-button-prev {
+}

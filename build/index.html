@@ -15,14 +15,19 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="./css/main.css" />
 
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
     <section class="welcome">
-      <header data-aos="zoom-in" class="header container">
+      <header class="header container">
   <a href="/" class="header__logo roll-in-left"
     ><img src="./img/logo.svg" alt="Lingua"
   /></a>
@@ -64,84 +69,154 @@
     </li>
   </ul>
 </header>
- <div data-aos="zoom-in" class="container welcome-content">
+ <div class="container welcome-content">
   <div class="welcome__info">
-    <h1 class="welcome__title text-focus-in">
+    <h1 class="welcome__title text-focus-in-1">
       A <span>unique</span> approach to learning foreign languages online
     </h1>
-    <p class="welcome__desc text-focus-in">
+    <p class="welcome__desc text-focus-in-2">
       Learn at your own pace, with lifetime access on mobile and desktop
     </p>
     <div class="welcome__btn">
       <a href="/" class="btn _secondary rotate-center">Get started</a>
     </div>
   </div>
-  <div class="welcome__img scale-in-top">
+  <div class="welcome__img text-focus-in">
     <img src="./img/welcome.png" alt="Lingua" />
   </div>
 </div>
 
     </section>
     <section class="container values">
-    <p class="values__why">WHY CHOOSE US</p>
-    <h2 class="values__title">Our values </h2>
-    <div class="values-list">
-        <div class="values-item">
-            <div class="values-item__img">
-                <img src="./img/value1.png" alt="Speaking clubs">
-            </div>
-            <h3 class="values-item__title">Speaking clubs</h3>
-            <p class="values-item__desc">In our school you will practice your speaking skills and just get a lot of positive emotions!</p>
-        </div>
-        <div class="values-item">
-            <div class="values-item__img">
-                <img src="./img/value2.png" alt="Quality control">
-            </div>
-            <h3 class="values-item__title">Quality control</h3>
-            <p class="values-item__desc">A huge work has been done with the teachers and their work has been monitored thoroughly. </p>
-        </div>
-        <div class="values-item">
-            <div class="values-item__img">
-                <img src="./img/value3.png" alt="Progress analysis">
-            </div>
-            <h3 class="values-item__title">Progress analysis</h3>
-            <p class="values-item__desc">The CEF of Reference has been used at our school. It allows to control our students’ success in studying.</p>
-        </div>
+  <p class="values__why text-focus-in-1">WHY CHOOSE US</p>
+  <h2 class="values__title text-focus-in">Our values</h2>
+  <div class="values-list">
+    <div class="values-item">
+      <div class="values-item__img bounce-top">
+        <img src="./img/value1.png" alt="Speaking clubs" />
+      </div>
+      <h3 class="values-item__title text-focus-in">Speaking clubs</h3>
+      <p class="values-item__desc text-focus-in-2">
+        In our school you will practice your speaking skills and just get a lot
+        of positive emotions!
+      </p>
     </div>
+    <div class="values-item">
+      <div class="values-item__img bounce-top">
+        <img src="./img/value2.png" alt="Quality control" />
+      </div>
+      <h3 class="values-item__title text-focus-in">Quality control</h3>
+      <p class="values-item__desc text-focus-in-2">
+        A huge work has been done with the teachers and their work has been
+        monitored thoroughly.
+      </p>
+    </div>
+    <div class="values-item">
+      <div class="values-item__img bounce-top">
+        <img src="./img/value3.png" alt="Progress analysis" />
+      </div>
+      <h3 class="values-item__title text-focus-in">Progress analysis</h3>
+      <p class="values-item__desc text-focus-in-2">
+        The CEF of Reference has been used at our school. It allows to control
+        our students’ success in studying.
+      </p>
+    </div>
+  </div>
 </section>
- <footer class="container footer">
-	<div class="footer-info">
-		<a href="/" class="footer-info__logo">
-			<img src="./img/footer-logo.svg" alt="Lingua">
-		</a>
-		<a href="/" class="footer-info__address">20 Osgood Rd, Milford, NH 03055, USA</a>
-		<a href="/" class="footer-info__number">+1283871239190213021</a>
-	</div>
-	<div class="footer-links">
-		<div class="footer-links__column">
-			<div class="footer-links__header">Company</div>
-			<a href="/" class="footer-links__link">Careers</a>
-			<a href="/" class="footer-links__link">Teachers</a>
-			<a href="/" class="footer-links__link">Support</a>
-			<a href="/" class="footer-links__link">Contact</a>
-		</div>
-		<div class="footer-links__column">
-			<div class="footer-links__header">Product</div>
-			<a href="/" class="footer-links__link">Courses</a>
-			<a href="/" class="footer-links__link">Pricing</a>
-			<a href="/" class="footer-links__link">Blog</a>
-		</div>
-		<div class="footer-links__column">
-			<div class="footer-links__header">Legal</div>
-			<a href="/" class="footer-links__link">Terms & Conditions</a>
-			<a href="/" class="footer-links__link">Privacy policy</a>
-		</div>
-	</div>
-	<div class="footer-socials">
-		<a href="/" class="footer-socials__link"><img src="./img/facebook.svg" alt="Facebook"></a>
-		<a href="/" class="footer-socials__link"><img src="./img/twitter.svg" alt="Twitter"></a>
-		<a href="/" class="footer-socials__link"><img src="./img/instagram.svg" alt="Instagram"></a>
-	</div>
+ <section class="container teachers">
+  <div class="teachers__swiper-btn">
+    <div id="prev" class="swiper-button-prev"></div>
+    <div id="next" class="swiper-button-next"></div>
+  </div>
+
+  <div class="swiper swiper-teachers">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img
+          class="wiper-slide__img"
+          src="img/teachers/Christian.png"
+          alt="Christian"
+        />
+        <h2 class="swiper-slide__name">Christian Howard</h2>
+        <div class="swiper-slide__language-info">
+          <img src="img/flag/Italy.svg" alt="Italy" />
+          <p class="swiper-slide__language">Italian teacher</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img
+          class="wiper-slide__img"
+          src="img/teachers/Jimmy.png"
+          alt="jimmy"
+        />
+        <h2 class="swiper-slide__name">Sandra Wilson</h2>
+        <div class="swiper-slide__language-info">
+          <img src="img/flag/Spain.svg" alt="Spain" />
+          <p class="swiper-slide__language">Spanish teacher</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img
+          class="wiper-slide__img"
+          src="img/teachers/Sandra.png"
+          alt="Sandra"
+        />
+        <h2 class="swiper-slide__name">Jimmy Cooper</h2>
+        <div class="swiper-slide__language-info">
+          <img src="img/flag/UK.svg" alt="UK" />
+          <p class="swiper-slide__language">English teacher</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <footer class="container footer text-focus-in-2">
+  <div class="footer-info">
+    <a href="/" class="footer-info__logo">
+      <img src="./img/footer-logo.svg" alt="Lingua" />
+    </a>
+    <a
+      href="https://www.google.com/maps?q=20+Osgood+Rd,+Milford,+NH+03055,+USA&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBBzc0M2owajeoAgCwAgA&um=1&ie=UTF-8&sa=X&ved=2ahUKEwiUp7W099KBAxUZFhAIHcwOC_QQ_AUoAXoECAIQAw"
+      class="footer-info__address"
+      target="/"
+      >20 Osgood Rd, Milford, NH 03055, USA</a
+    >
+    <a href="tel:+1283871239190213021" class="footer-info__number"
+      >+1283871239190213021</a
+    >
+  </div>
+  <div class="footer-links">
+    <div class="footer-links__column">
+      <div class="footer-links__header">Company</div>
+      <a href="/" class="footer-links__link">Careers</a>
+      <a href="/" class="footer-links__link">Teachers</a>
+      <a href="/" class="footer-links__link">Support</a>
+      <a href="/" class="footer-links__link">Contact</a>
+    </div>
+    <div class="footer-links__column">
+      <div class="footer-links__header">Product</div>
+      <a href="/" class="footer-links__link">Courses</a>
+      <a href="/" class="footer-links__link">Pricing</a>
+      <a href="/" class="footer-links__link">Blog</a>
+    </div>
+    <div class="footer-links__column">
+      <div class="footer-links__header">Legal</div>
+      <a href="/" class="footer-links__link">Terms & Conditions</a>
+      <a href="/" class="footer-links__link">Privacy policy</a>
+    </div>
+  </div>
+  <div class="footer-socials">
+    <a href="/" class="footer-socials__link"
+      ><img src="./img/facebook.svg" alt="Facebook"
+    /></a>
+    <a href="/" class="footer-socials__link"
+      ><img src="./img/twitter.svg" alt="Twitter"
+    /></a>
+    <a href="/" class="footer-socials__link"
+      ><img src="./img/instagram.svg" alt="Instagram"
+    /></a>
+  </div>
 </footer>
 
     <script src="./js/index.bundle.js"></script>
@@ -155,6 +230,38 @@
       }
     </script>
 
- 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper-teachers", {
+        // Optional parameters
+        slidesPerView: 3,
+        // spaceBetween: 15,
+        // slidesPerGroupAuto: true,
+
+        direction: "horizontal",
+        loop: true,
+        // allowTouchMove: true,
+        // effect: "cube",
+        autoplay: {
+          delay: 10000,
+          pauseOnMouseEnter: true,
+          disableOnInteraction: false,
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        // scrollbar: {
+        //   el: ".swiper-scrollbar",
+        //   draggable: true,
+        // },
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   </body>
 </html>

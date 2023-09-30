@@ -1,18 +1,4 @@
-.text-focus-in {
-  animation: text-focus-in 3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-}
-
-@keyframes text-focus-in {
-  0% {
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    filter: blur(0);
-    opacity: 1;
-  }
-}
-
+// BTN
 .rotate-center {
   animation: rotate-center 1s ease-in-out both;
 }
@@ -26,6 +12,7 @@
   }
 }
 
+// BTN / value
 .bounce-top {
   animation: bounce-top 2s both;
 }
@@ -100,8 +87,38 @@
     opacity: 1;
   }
 }
+
+.text-focus-in-1 {
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
 .text-focus-in {
   animation: text-focus-in 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.text-focus-in-2 {
+  animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 @keyframes text-focus-in {

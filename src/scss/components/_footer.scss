@@ -9,10 +9,15 @@
     flex-direction: column;
     gap: 30px;
   }
+
+  @include mobile {
+    text-align: center;
+  }
 }
 .footer-info {
   display: flex;
   flex-direction: column;
+
   &__logo {
     margin-bottom: 32px;
     max-width: 110px;
@@ -53,12 +58,29 @@
     display: block;
     font: var(--Body_text_14);
     color: var(--Body-text);
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--Primary-200);
+    }
+
+    @include mobile {
+      margin-bottom: 22px;
+    }
   }
 }
 .footer-socials {
   flex-shrink: 0;
-  @include desktop-small {
-    display: flex;
-    flex-direction: column;
+
+  a {
+    img {
+      border-radius: 50%;
+      transition: var(--transition);
+
+      &:hover {
+        background-color: var(--c-primary);
+        border-radius: 50%;
+      }
+    }
   }
 }

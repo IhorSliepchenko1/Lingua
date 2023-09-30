@@ -13,12 +13,14 @@
 
 @import "layout/grid";
 
+// UI
+@import "components/UI/btn";
+
 // components
-
-@import "components/btn";
-
 @import "components/header";
 @import "components/footer";
 
-@import "components/welcome";
-@import "components/values";
+// sections
+@import "sections/welcome";
+@import "sections/values";
+@import "sections/teachers";

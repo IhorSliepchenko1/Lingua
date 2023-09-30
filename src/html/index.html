@@ -15,16 +15,22 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="./css/main.css" />
 
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
     <section class="welcome">
       @@include('blocks/header.html') @@include('blocks/welcome-content.html')
     </section>
-    @@include('blocks/values.html') @@include('blocks/footer.html')
+    @@include('blocks/values.html') @@include('blocks/teachers.html')
+    @@include('blocks/footer.html')
     <script src="./js/index.bundle.js"></script>
     <script>
       // BURGER / NO-SCROLL BODY
@@ -36,6 +42,38 @@
       }
     </script>
 
- 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper-teachers", {
+        // Optional parameters
+        slidesPerView: 3,
+        // spaceBetween: 15,
+        // slidesPerGroupAuto: true,
+
+        direction: "horizontal",
+        loop: true,
+        // allowTouchMove: true,
+        // effect: "cube",
+        autoplay: {
+          delay: 10000,
+          pauseOnMouseEnter: true,
+          disableOnInteraction: false,
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        // scrollbar: {
+        //   el: ".swiper-scrollbar",
+        //   draggable: true,
+        // },
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   </body>
 </html>
