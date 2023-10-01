@@ -3,7 +3,7 @@
   border: 0;
   outline: 0;
   cursor: pointer;
-  padding: 12px 32px;
+  padding: 12px 32rem;
   border-radius: 73px;
   font: var(--Button);
   &._primary {
@@ -17,7 +17,7 @@
     }
   }
   &._secondary {
-    padding: 17px 32px;
+    padding: 17rem 32rem;
     color: var(--Background---White);
     background: var(--Primary-200);
     border: 1px solid transparent;

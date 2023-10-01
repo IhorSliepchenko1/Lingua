@@ -1,8 +1,8 @@
 .values {
-  margin-top: 200px;
+  margin-top: 200rem;
   text-align: center;
   @include mobile {
-   margin-top: 50px;
+    margin-top: 50rem;
   }
   &__why {
     font: var(--Subtitle_1);
@@ -14,7 +14,7 @@
   &__title {
     font: var(--H2);
     color: var(--Text-Primary);
-    margin-bottom: 88px;
+    margin-bottom: 88rem;
   }
 }
 .values-list {
@@ -32,10 +32,10 @@
 }
 .values-item {
   &__img {
-    max-width: 81px;
-    max-height: 81px;
+    max-width: 81rem;
+    max-height: 81rem;
     margin-inline: auto;
-    margin-bottom: 47px;
+    margin-bottom: 47rem;
   }
 
   &__title {
@@ -45,7 +45,13 @@
   }
 
   &__desc {
-    font: var(Body_text_18);
+    font: var(--Body_text_18);
     color: var(--Body-text);
+
+    @include mobile {
+      margin-inline: auto;
+      text-align: center;
+      max-width: 200px;
+    }
   }
 }

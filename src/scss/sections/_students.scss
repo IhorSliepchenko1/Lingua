@@ -1,5 +1,93 @@
-h1 {
-  display: grid;
+.students {
+  display: flex;
   justify-content: center;
-  color: green;
+  align-items: center;
+  gap: 128rem;
+
+  @include tablet {
+    display: block;
+  }
+
+  &__info {
+    @include tablet {
+      text-align: center;
+    }
+  }
+  &__top {
+    color: var(--Outline-dark);
+    font-family: Axiforma;
+    font: var(--Subtitle_1);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  &__title {
+    color: var(--Text-Primary);
+    font-family: Axiforma;
+    font: var(--H2);
+    margin-bottom: 59px;
+  }
+
+  &__img {
+    max-width: 502rem;
+    max-height: 633rem;
+
+    @include tablet-small {
+      max-width: 402rem;
+      max-height: 533rem;
+    }
+  }
+}
+
+.students-slide {
+  padding-top: 107.5rem;
+  &__name {
+    color: var(--Text-Primary);
+    font-feature-settings: "clig" off, "liga" off;
+    font: var(--H3);
+  }
+
+  &__info {
+    margin-top: 13px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    img {
+      width: 34px;
+      height: 34px;
+    }
+  }
+
+  &__course {
+    padding-top: 6px;
+    color: var(--Body-text);
+    font: var(--Body_text_18);
+  }
+
+  &__desc {
+    color: var(--Text-Primary);
+    font: var(--H4);
+    max-width: 580rem;
+  }
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  width: 10rem;
+  height: 10rem;
+  background: var(--Primary-200);
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: var(--swiper-pagination-bottom, 8px);
+  top: var(--swiper-pagination-top, auto);
+  left: 0;
+  width: 100%;
+  position: relative;
+  margin-top: 81rem;
+  display: flex;
 }

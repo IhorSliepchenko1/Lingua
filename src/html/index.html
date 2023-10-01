@@ -74,6 +74,35 @@
       initSwiper();
     </script>
 
+    <script>
+      const swiperStudents = new Swiper(".swiper-students", {
+        // Optional parameters
+        // slidesPerView: "auto",
+        // spaceBetween: 15,
+        // slidesPerGroupAuto: true,
+
+        direction: "horizontal",
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          // dynamicBullets: true
+        },
+
+        // And if we need scrollbar
+        // scrollbar: {
+        //   el: ".swiper-scrollbar",
+        //   draggable: true,
+        // },
+      });
+    </script>
+
+    <script>
+      function sendEmail() {
+        let input = document.getElementById("inp");
+        alert(input.value);
+      }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   </body>
 </html>

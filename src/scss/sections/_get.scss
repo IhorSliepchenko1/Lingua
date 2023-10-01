@@ -1,5 +1,43 @@
-h1 {
-  display: grid;
-  justify-content: center;
-  color: black;
+.get {
+  margin-top: 240rem;
+  &__title {
+    color: var(--Text-Primary);
+    text-align: center;
+    font: var(--H2);
+  }
+
+  &__desc {
+    color: var(--Body-text);
+    text-align: center;
+    font: var(--Body_text_18);
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 58px;
+    gap: 20px;
+   
+  }
+
+  &__input {
+    font-size: 20rem;
+    max-width: 410rem;
+    padding: 15px 45.97px 15px 33.545px;
+    border-radius: 73px;
+    background: #f8fafe;
+    outline: none;
+    border: 0;
+
+    display: flex;
+    align-items: center;
+
+    &::placeholder {
+      color: var(--Outline-dark);
+      font: var(--Body_text_18);
+    }
+  }
+
+
 }

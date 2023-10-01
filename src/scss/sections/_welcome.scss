@@ -11,9 +11,9 @@
     font: var(--H1);
     color: var(--Text-Primary);
     margin-bottom: 18px;
-    max-width: 558px;
     span {
       color: var(--Primary-200);
+      font-weight: 500;
     }
   }
 
@@ -29,7 +29,7 @@
       max-height: 690px;
     }
     @include tablet {
-      height: 300px;
+      height: 450rem;
       img {
         height: 100%;
       }

@@ -71,9 +71,9 @@
 </header>
  <div class="container welcome-content">
   <div class="welcome__info">
-    <h1 class="welcome__title text-focus-in-1">
+    <h2 class="welcome__title text-focus-in-1">
       A <span>unique</span> approach to learning foreign languages online
-    </h1>
+    </h2>
     <p class="welcome__desc text-focus-in-2">
       Learn at your own pace, with lifetime access on mobile and desktop
     </p>
@@ -129,13 +129,14 @@
   <div class="teachers__meet">
     <h2 class="teachers__title text-focus-in">Meet our teachers</h2>
 
-    <div class="teachers__swiper-btn">
-      <div class="teachers__prev bounce-top">
+    <div class="teachers__swiper-btn bounce-top">
+      <div class="teachers__prev">
         <span class="material-icons left"> chevron_left </span>
       </div>
-    </div>
-    <div class="teachers__next bounce-top">
-      <span class="material-icons right"> chevron_right </span>
+
+      <div class="teachers__next">
+        <span class="material-icons right"> chevron_right </span>
+      </div>
     </div>
   </div>
 
@@ -219,8 +220,108 @@
   </div>
 </section>
 
-    <h1>HELLO</h1> <h1>HELLO</h1>
-    <h1>HELLO</h1> <footer class="container footer text-focus-in-2">
+    <section class="students container">
+  <div class="students__info">
+    <p class="students__top text-focus-in-1">TOP STUDIYING</p>
+    <h2 class="students__title text-focus-in">Our students say</h2>
+    <img
+      src="img/students/Martin.png"
+      alt="Martin"
+      class="students__img text-focus-in"
+    />
+  </div>
+
+  <div class="swiper swiper-students">
+    <div class="swiper-wrapper text-focus-in">
+      <div class="swiper-slide students-slide">
+        <div class="students-slide__name">Martin Watson</div>
+        <div class="students-slide__info">
+          <img src="img/flag/Spain.png" alt="Spain" />
+          <p class="students-slide__course">B2 course student</p>
+        </div>
+        <div class="students-slide__desc">
+          There is no way I could have made the same progress learning Spanish
+          without using Lingua. The best part is now learning Spanish has become
+          one of my biggest hobbies.
+        </div>
+      </div>
+
+      <div class="swiper-slide students-slide">
+        <div class="students-slide__name">Martin Watson</div>
+        <div class="students-slide__info">
+          <img src="img/flag/Spain.png" alt="Spain" />
+          <p class="students-slide__course">B2 course student</p>
+        </div>
+        <div class="students-slide__desc">
+          There is no way I could have made the same progress learning Spanish
+          without using Lingua. The best part is now learning Spanish has become
+          one of my biggest hobbies.
+        </div>
+      </div>
+
+      <div class="swiper-slide students-slide">
+        <div class="students-slide__name">Martin Watson</div>
+        <div class="students-slide__info">
+          <img src="img/flag/Spain.png" alt="Spain" />
+          <p class="students-slide__course">B2 course student</p>
+        </div>
+        <div class="students-slide__desc">
+          There is no way I could have made the same progress learning Spanish
+          without using Lingua. The best part is now learning Spanish has become
+          one of my biggest hobbies.
+        </div>
+      </div>
+
+      <div class="swiper-slide students-slide">
+        <div class="students-slide__name">Martin Watson</div>
+        <div class="students-slide__info">
+          <img src="img/flag/Spain.png" alt="Spain" />
+          <p class="students-slide__course">B2 course student</p>
+        </div>
+        <div class="students-slide__desc">
+          There is no way I could have made the same progress learning Spanish
+          without using Lingua. The best part is now learning Spanish has become
+          one of my biggest hobbies.
+        </div>
+      </div>
+
+      <div class="swiper-slide students-slide">
+        <div class="students-slide__name">Martin Watson</div>
+        <div class="students-slide__info">
+          <img src="img/flag/Spain.png" alt="Spain" />
+          <p class="students-slide__course">B2 course student</p>
+        </div>
+        <div class="students-slide__desc">
+          There is no way I could have made the same progress learning Spanish
+          without using Lingua. The best part is now learning Spanish has become
+          one of my biggest hobbies.
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination text-focus-in-2"></div>
+  </div>
+</section>
+ <h1>HELLO</h1>
+    <section class="get container">
+  <h2 class="get__title">Get a free trial lesson today</h2>
+  <p class="get__desc">Start fulfilling your language dreams with our school</p>
+
+  <div class="get__form">
+    <form>
+      <input id="inp"
+        class="get__input"
+        type="email"
+        placeholder="Enter your email"
+        maxlength="30"
+      />
+    </form>
+
+    <button class="get__btn" onclick="sendEmail()">
+      <a href="/" class="btn _secondary rotate-center">Send</a>
+    </button>
+  </div>
+</section>
+ <footer class="container footer text-focus-in-2">
   <div class="footer-info">
     <a href="/" class="footer-info__logo">
       <img src="./img/footer-logo.svg" alt="Lingua" />
@@ -256,13 +357,16 @@
     </div>
   </div>
   <div class="footer-socials">
-    <a href="/" class="footer-socials__link"
+    <a href="https://www.facebook.com/" target="/" class="footer-socials__link"
       ><img src="./img/facebook.svg" alt="Facebook"
     /></a>
-    <a href="/" class="footer-socials__link"
+    <a
+      href="https://twitter.com/?lang=ru"
+      target="/"
+      class="footer-socials__link"
       ><img src="./img/twitter.svg" alt="Twitter"
     /></a>
-    <a href="/" class="footer-socials__link"
+    <a href="https://www.instagram.com/" target="/" class="footer-socials__link"
       ><img src="./img/instagram.svg" alt="Instagram"
     /></a>
   </div>
@@ -310,6 +414,35 @@
       initSwiper();
     </script>
 
+    <script>
+      const swiperStudents = new Swiper(".swiper-students", {
+        // Optional parameters
+        // slidesPerView: "auto",
+        // spaceBetween: 15,
+        // slidesPerGroupAuto: true,
+
+        direction: "horizontal",
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          // dynamicBullets: true
+        },
+
+        // And if we need scrollbar
+        // scrollbar: {
+        //   el: ".swiper-scrollbar",
+        //   draggable: true,
+        // },
+      });
+    </script>
+
+    <script>
+      function sendEmail() {
+        let input = document.getElementById("inp");
+        alert(input.value);
+      }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   </body>
 </html>

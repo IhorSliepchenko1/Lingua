@@ -8,6 +8,7 @@
   @include tablet {
     flex-direction: column;
     gap: 30px;
+    padding: 52px 69px 70px 69px;
   }
 
   @include mobile {
@@ -71,6 +72,11 @@
 }
 .footer-socials {
   flex-shrink: 0;
+
+  @include tablet-small {
+    display: flex;
+    gap: 35px;
+  }
 
   a {
     img {
