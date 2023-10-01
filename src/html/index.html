@@ -30,7 +30,8 @@
       @@include('blocks/header.html') @@include('blocks/welcome-content.html')
     </section>
     @@include('blocks/values.html') @@include('blocks/teachers.html')
-    @@include('blocks/footer.html')
+    @@include('blocks/students.html') @@include('blocks/common.html')
+    @@include('blocks/get.html') @@include('blocks/footer.html')
     <script src="./js/index.bundle.js"></script>
     <script>
       // BURGER / NO-SCROLL BODY
@@ -44,34 +45,33 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
-      const swiper = new Swiper(".swiper-teachers", {
-        // Optional parameters
-        slidesPerView: 3,
-        // spaceBetween: 15,
-        // slidesPerGroupAuto: true,
+      let swiper; // Объявляем переменную swiper
 
-        direction: "horizontal",
-        loop: true,
-        // allowTouchMove: true,
-        // effect: "cube",
-        autoplay: {
-          delay: 10000,
-          pauseOnMouseEnter: true,
-          disableOnInteraction: false,
-        },
+      // Функция для инициализации или обновления Swiper
+      function initSwiper() {
+        if (swiper) {
+          swiper.destroy(); // Уничтожаем текущий Swiper, если он существует
+        }
 
-        // Navigation arrows
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
+        swiper = new Swiper(".swiper-teachers", {
+          slidesPerView:
+            window.innerWidth <= 850 ? 1 : window.innerWidth <= 1300 ? 2 : 3, // Условное изменение slidesPerView
+          spaceBetween: window.innerWidth <= 850 ? 40 : 65, // Условное изменение spaceBetween
+          slidesPerGroup: 1,
+          loop: true,
+          loopFillGroupWithBlank: true,
+          navigation: {
+            nextEl: ".teachers__next",
+            prevEl: ".teachers__prev",
+          },
+        });
+      }
 
-        // And if we need scrollbar
-        // scrollbar: {
-        //   el: ".swiper-scrollbar",
-        //   draggable: true,
-        // },
-      });
+      // Добавляем слушатель события для изменения размера окна браузера
+      window.addEventListener("resize", initSwiper);
+
+      // Инициализируем Swiper при загрузке страницы
+      initSwiper();
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>

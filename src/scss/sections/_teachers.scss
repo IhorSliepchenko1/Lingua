@@ -1,22 +1,110 @@
-#prev {
-  position: absolute;
-  left: 1150px;
-  display: flex;
-  width: 56px;
-  height: 56px;
-  padding: 15.556px;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-  background: red;
-  border-radius: 50%;
+.teachers {
+  margin-top: 240px;
+  margin-bottom: 241px;
+  &__key {
+    color: var(--Outline-dark);
+    font: var(--Subtitle_1);
+    text-transform: uppercase;
+  }
+  &__meet {
+    display: flex;
+    align-items: center;
+  }
+  &__title {
+    margin-top: 24px;
+    margin-right: 673px;
+    color: var(--Text-Primary);
+    font: var(--H2);
+
+    @include desktop-small {
+      margin-right: 450px;
+    }
+
+    @include tablet {
+      margin-right: 250px;
+    }
+
+    @include tablet-small {
+      margin-right: 70px;
+    }
+    @include mobile {
+      margin-right: 30px;
+    }
+  }
+
+  &__prev {
+    width: 56px;
+    height: 56px;
+    border-radius: 40px;
+    border: 1px solid var(--Outline);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    cursor: pointer;
+  }
+  &__next {
+    width: 56px;
+    height: 56px;
+    border-radius: 40px;
+    background: var(--Primary-200);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .material-icons {
+    &.left {
+      color: var(--Outline);
+    }
+    &.right {
+      color: var(--Grayscale-Line);
+    }
+  }
 }
 
-.teachers__swiper-btn {
-  position: relative;
+.swiper-teachers {
+  margin-top: 59px;
+  border-radius: 55px 55px 0 0;
+}
+
+.swiper-slide {
   display: grid;
-  text-align: right;
+  justify-content: center;
+  &__name {
+    margin-top: 40px;
+    margin-bottom: 16px;
+    color: var(--Text-Primary);
+    font-feature-settings: "clig" off, "liga" off;
+    font: var(--H5);
+  }
+
+  &__language-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    img {
+      width: 34px;
+      height: 34px;
+    }
+  }
+
+  &__language {
+    padding-top: 10px;
+    color: var(--Body-text);
+    font: var(--Body_text_18);
+  }
+}
+.wiper-slide {
+  &__img {
+    max-width: 366px;
+    max-height: 417px;
+    border-radius: 55px;
+  }
 }
 
-.swiper-button-prev {
+.swiper-teachers .swiper-slide {
+  display: grid;
+  justify-content: center;
 }
