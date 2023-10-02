@@ -1,9 +1,12 @@
 .get {
   margin-top: 240rem;
+  @include tablet {
+    margin-top: 120rem;
+  }
   &__title {
     color: var(--Text-Primary);
-    text-align: center;
     font: var(--H2);
+    text-align: center;
   }
 
   &__desc {
@@ -18,17 +21,16 @@
     align-items: center;
     margin-top: 58px;
     gap: 20px;
-   
   }
 
   &__input {
-    font-size: 20rem;
     max-width: 410rem;
     padding: 15px 45.97px 15px 33.545px;
     border-radius: 73px;
     background: #f8fafe;
     outline: none;
     border: 0;
+    font: var(--Body_text_18);
 
     display: flex;
     align-items: center;
@@ -38,6 +40,4 @@
       font: var(--Body_text_18);
     }
   }
-
-
 }

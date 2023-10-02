@@ -3,9 +3,13 @@
   justify-content: center;
   align-items: center;
   gap: 128rem;
+  margin-bottom: 200rem;
 
   @include tablet {
     display: block;
+
+    margin-bottom: 140rem;
+
   }
 
   &__info {
@@ -71,6 +75,8 @@
     max-width: 580rem;
   }
 }
+
+// specials style
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets
   .swiper-pagination-bullet {

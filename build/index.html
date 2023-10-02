@@ -301,14 +301,175 @@
     <div class="swiper-pagination text-focus-in-2"></div>
   </div>
 </section>
- <h1>HELLO</h1>
-    <section class="get container">
-  <h2 class="get__title">Get a free trial lesson today</h2>
-  <p class="get__desc">Start fulfilling your language dreams with our school</p>
+ <section class="common container">
+  <p class="common__more text-focus-in-1">more info</p>
+  <h2 class="common__title text-focus-in">Common questions</h2>
 
-  <div class="get__form">
+  <div class="accordion-container text-focus-in">
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <h2 class="accordion-title">How can I know my level of knowledge?</h2>
+          <img
+            src="img/accordion-arrows/plus.svg"
+            alt="plus"
+            class="accordion-header__plus"
+          />
+          <img
+            src="img/accordion-arrows/minus.svg"
+            alt="minus"
+            class="accordion-header__minus"
+          />
+        </div>
+        <div class="accordion-content">
+          <p class="accordion-content__desc">
+            By the end of the trial lesson, you will be able to determine for
+            yourself whether this kind of online lesson is right for you or not.
+            In our experience, most students appreciate the benefits of online
+            education and decide to study online.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <h2 class="accordion-title">
+            Can I do it individually or only in a group?
+          </h2>
+          <img
+            src="img/accordion-arrows/plus.svg"
+            alt="plus"
+            class="accordion-header__plus"
+          />
+          <img
+            src="img/accordion-arrows/minus.svg"
+            alt="minus"
+            class="accordion-header__minus"
+          />
+        </div>
+        <div class="accordion-content">
+          <p class="accordion-content__desc">
+            By the end of the trial lesson, you will be able to determine for
+            yourself whether this kind of online lesson is right for you or not.
+            In our experience, most students appreciate the benefits of online
+            education and decide to study online.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <h2 class="accordion-title">What is the maximum group size?</h2>
+          <img
+            src="img/accordion-arrows/plus.svg"
+            alt="plus"
+            class="accordion-header__plus"
+          />
+          <img
+            src="img/accordion-arrows/minus.svg"
+            alt="minus"
+            class="accordion-header__minus"
+          />
+        </div>
+        <div class="accordion-content">
+          <p class="accordion-content__desc">
+            By the end of the trial lesson, you will be able to determine for
+            yourself whether this kind of online lesson is right for you or not.
+            In our experience, most students appreciate the benefits of online
+            education and decide to study online.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <h2 class="accordion-title">
+            Do I need to buy materials for lessons?
+          </h2>
+          <img
+            src="img/accordion-arrows/plus.svg"
+            alt="plus"
+            class="accordion-header__plus"
+          />
+          <img
+            src="img/accordion-arrows/minus.svg"
+            alt="minus"
+            class="accordion-header__minus"
+          />
+        </div>
+        <div class="accordion-content">
+          <p class="accordion-content__desc">
+            By the end of the trial lesson, you will be able to determine for
+            yourself whether this kind of online lesson is right for you or not.
+            In our experience, most students appreciate the benefits of online
+            education and decide to study online.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <h2 class="accordion-title">
+            Are you adjusting to the student's schedule?
+          </h2>
+          <img
+            src="img/accordion-arrows/plus.svg"
+            alt="plus"
+            class="accordion-header__plus"
+          />
+          <img
+            src="img/accordion-arrows/minus.svg"
+            alt="minus"
+            class="accordion-header__minus"
+          />
+        </div>
+        <div class="accordion-content">
+          <p class="accordion-content__desc">
+            By the end of the trial lesson, you will be able to determine for
+            yourself whether this kind of online lesson is right for you or not.
+            In our experience, most students appreciate the benefits of online
+            education and decide to study online.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <h2 class="accordion-title">
+            How the first lesson with teacher will be?
+          </h2>
+          <img
+            src="img/accordion-arrows/plus.svg"
+            alt="plus"
+            class="accordion-header__plus"
+          />
+          <img
+            src="img/accordion-arrows/minus.svg"
+            alt="minus"
+            class="accordion-header__minus"
+          />
+        </div>
+        <div class="accordion-content">
+          <p class="accordion-content__desc">
+            By the end of the trial lesson, you will be able to determine for
+            yourself whether this kind of online lesson is right for you or not.
+            In our experience, most students appreciate the benefits of online
+            education and decide to study online.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="get container">
+  <h2 class="get__title text-focus-in-1">Get a free trial lesson today</h2>
+  <p class="get__desc text-focus-in">
+    Start fulfilling your language dreams with our school
+  </p>
+
+  <div class="get__form text-focus-in-1">
     <form>
-      <input id="inp"
+      <input
+        id="inp"
         class="get__input"
         type="email"
         placeholder="Enter your email"
@@ -316,8 +477,8 @@
       />
     </form>
 
-    <button class="get__btn" onclick="sendEmail()">
-      <a href="/" class="btn _secondary rotate-center">Send</a>
+    <button class="btn _secondary rotate-center" onclick="sendEmail()">
+      Send
     </button>
   </div>
 </section>
@@ -385,18 +546,16 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
-      let swiper; // Объявляем переменную swiper
-
-      // Функция для инициализации или обновления Swiper
+      let swiper;
       function initSwiper() {
         if (swiper) {
-          swiper.destroy(); // Уничтожаем текущий Swiper, если он существует
+          swiper.destroy();
         }
 
         swiper = new Swiper(".swiper-teachers", {
           slidesPerView:
-            window.innerWidth <= 850 ? 1 : window.innerWidth <= 1300 ? 2 : 3, // Условное изменение slidesPerView
-          spaceBetween: window.innerWidth <= 850 ? 40 : 65, // Условное изменение spaceBetween
+            window.innerWidth <= 850 ? 1 : window.innerWidth <= 1300 ? 2 : 3,
+          spaceBetween: window.innerWidth <= 850 ? 40 : 65,
           slidesPerGroup: 1,
           loop: true,
           loopFillGroupWithBlank: true,
@@ -407,33 +566,18 @@
         });
       }
 
-      // Добавляем слушатель события для изменения размера окна браузера
       window.addEventListener("resize", initSwiper);
-
-      // Инициализируем Swiper при загрузке страницы
       initSwiper();
     </script>
 
     <script>
       const swiperStudents = new Swiper(".swiper-students", {
-        // Optional parameters
-        // slidesPerView: "auto",
-        // spaceBetween: 15,
-        // slidesPerGroupAuto: true,
-
         direction: "horizontal",
         loop: true,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
-          // dynamicBullets: true
         },
-
-        // And if we need scrollbar
-        // scrollbar: {
-        //   el: ".swiper-scrollbar",
-        //   draggable: true,
-        // },
       });
     </script>
 
@@ -442,6 +586,94 @@
         let input = document.getElementById("inp");
         alert(input.value);
       }
+    </script>
+
+    <script>
+      const accordionContent = document.querySelectorAll(".accordion-content");
+
+      accordionContent.forEach((item, index) => {
+        let header = item.querySelector("header");
+        header.addEventListener("click", () => {
+          item.classList.toggle("is-open");
+
+          let description = item.querySelector(
+            ".accordion-content-description"
+          );
+          if (item.classList.contains("is-open")) {
+            // Scrollheight property return the height of
+            // an element including padding
+            description.style.height = `${description.scrollHeight}px`;
+            item.querySelector("i").classList.replace("fa-plus", "fa-minus");
+          } else {
+            description.style.height = "0px";
+            item.querySelector("i").classList.replace("fa-minus", "fa-plus");
+          }
+          // function to pass the index number of clicked header
+          removeOpenedContent(index);
+        });
+      });
+
+      function removeOpenedContent(index) {
+        accordionContent.forEach((item2, index2) => {
+          if (index != index2) {
+            item2.classList.remove("is-open");
+            let descrip = item2.querySelector(".accordion-content-description");
+            descrip.style.height = "0px";
+            item2.querySelector("i").classList.replace("fa-minus", "fa-plus");
+          }
+        });
+      }
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const accordionItems = document.querySelectorAll(".accordion-item");
+
+        accordionItems.forEach((item) => {
+          const header = item.querySelector(".accordion-header");
+          const content = item.querySelector(".accordion-content");
+          const minus = header.querySelector(".accordion-header__minus");
+          const plus = header.querySelector(".accordion-header__plus");
+          const title = header.querySelector(".accordion-title");
+
+          header.addEventListener("click", () => {
+            accordionItems.forEach((otherItem) => {
+              if (otherItem !== item) {
+                otherItem.classList.remove("active");
+                otherItem.querySelector(".accordion-content").style.display =
+                  "none";
+                otherItem
+                  .querySelector(".accordion-header__minus")
+                  .classList.remove("active");
+                otherItem
+                  .querySelector(".accordion-header__plus")
+                  .classList.remove("active");
+                otherItem
+                  .querySelector(".accordion-header")
+                  .classList.remove("active");
+                otherItem
+                  .querySelector(".accordion-title")
+                  .classList.remove("active");
+              }
+            });
+
+            item.classList.toggle("active");
+            if (item.classList.contains("active")) {
+              content.style.display = "block";
+              minus.classList.add("active");
+              plus.classList.add("active");
+              header.classList.add("active");
+              title.classList.add("active"); // Добавляем класс "active" к элементу .accordion-title при раскрытии
+            } else {
+              content.style.display = "none";
+              minus.classList.remove("active");
+              plus.classList.remove("active");
+              header.classList.remove("active");
+              title.classList.remove("active"); // Удаляем класс "active" у элемента .accordion-title при закрытии
+            }
+          });
+        });
+      });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   </body>

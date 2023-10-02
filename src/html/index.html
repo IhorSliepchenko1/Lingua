@@ -45,18 +45,16 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
-      let swiper; // Объявляем переменную swiper
-
-      // Функция для инициализации или обновления Swiper
+      let swiper;
       function initSwiper() {
         if (swiper) {
-          swiper.destroy(); // Уничтожаем текущий Swiper, если он существует
+          swiper.destroy();
         }
 
         swiper = new Swiper(".swiper-teachers", {
           slidesPerView:
-            window.innerWidth <= 850 ? 1 : window.innerWidth <= 1300 ? 2 : 3, // Условное изменение slidesPerView
-          spaceBetween: window.innerWidth <= 850 ? 40 : 65, // Условное изменение spaceBetween
+            window.innerWidth <= 850 ? 1 : window.innerWidth <= 1300 ? 2 : 3,
+          spaceBetween: window.innerWidth <= 850 ? 40 : 65,
           slidesPerGroup: 1,
           loop: true,
           loopFillGroupWithBlank: true,
@@ -67,33 +65,18 @@
         });
       }
 
-      // Добавляем слушатель события для изменения размера окна браузера
       window.addEventListener("resize", initSwiper);
-
-      // Инициализируем Swiper при загрузке страницы
       initSwiper();
     </script>
 
     <script>
       const swiperStudents = new Swiper(".swiper-students", {
-        // Optional parameters
-        // slidesPerView: "auto",
-        // spaceBetween: 15,
-        // slidesPerGroupAuto: true,
-
         direction: "horizontal",
         loop: true,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
-          // dynamicBullets: true
         },
-
-        // And if we need scrollbar
-        // scrollbar: {
-        //   el: ".swiper-scrollbar",
-        //   draggable: true,
-        // },
       });
     </script>
 
@@ -102,6 +85,94 @@
         let input = document.getElementById("inp");
         alert(input.value);
       }
+    </script>
+
+    <script>
+      const accordionContent = document.querySelectorAll(".accordion-content");
+
+      accordionContent.forEach((item, index) => {
+        let header = item.querySelector("header");
+        header.addEventListener("click", () => {
+          item.classList.toggle("is-open");
+
+          let description = item.querySelector(
+            ".accordion-content-description"
+          );
+          if (item.classList.contains("is-open")) {
+            // Scrollheight property return the height of
+            // an element including padding
+            description.style.height = `${description.scrollHeight}px`;
+            item.querySelector("i").classList.replace("fa-plus", "fa-minus");
+          } else {
+            description.style.height = "0px";
+            item.querySelector("i").classList.replace("fa-minus", "fa-plus");
+          }
+          // function to pass the index number of clicked header
+          removeOpenedContent(index);
+        });
+      });
+
+      function removeOpenedContent(index) {
+        accordionContent.forEach((item2, index2) => {
+          if (index != index2) {
+            item2.classList.remove("is-open");
+            let descrip = item2.querySelector(".accordion-content-description");
+            descrip.style.height = "0px";
+            item2.querySelector("i").classList.replace("fa-minus", "fa-plus");
+          }
+        });
+      }
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const accordionItems = document.querySelectorAll(".accordion-item");
+
+        accordionItems.forEach((item) => {
+          const header = item.querySelector(".accordion-header");
+          const content = item.querySelector(".accordion-content");
+          const minus = header.querySelector(".accordion-header__minus");
+          const plus = header.querySelector(".accordion-header__plus");
+          const title = header.querySelector(".accordion-title");
+
+          header.addEventListener("click", () => {
+            accordionItems.forEach((otherItem) => {
+              if (otherItem !== item) {
+                otherItem.classList.remove("active");
+                otherItem.querySelector(".accordion-content").style.display =
+                  "none";
+                otherItem
+                  .querySelector(".accordion-header__minus")
+                  .classList.remove("active");
+                otherItem
+                  .querySelector(".accordion-header__plus")
+                  .classList.remove("active");
+                otherItem
+                  .querySelector(".accordion-header")
+                  .classList.remove("active");
+                otherItem
+                  .querySelector(".accordion-title")
+                  .classList.remove("active");
+              }
+            });
+
+            item.classList.toggle("active");
+            if (item.classList.contains("active")) {
+              content.style.display = "block";
+              minus.classList.add("active");
+              plus.classList.add("active");
+              header.classList.add("active");
+              title.classList.add("active"); // Добавляем класс "active" к элементу .accordion-title при раскрытии
+            } else {
+              content.style.display = "none";
+              minus.classList.remove("active");
+              plus.classList.remove("active");
+              header.classList.remove("active");
+              title.classList.remove("active"); // Удаляем класс "active" у элемента .accordion-title при закрытии
+            }
+          });
+        });
+      });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   </body>

@@ -26,7 +26,7 @@ $mobile-sm: 390px;
 
   --Body_text_14: 300 14px/24px var(--ff);
   --Body_text_18: 300 18px/190% var(--ff);
-  --Button-send: 700 18px/normal var(--ff);
+  --Button-send: 700 18px / normal var(--ff);
 
   --Button: 700 14px/28px var(--ff);
 
@@ -35,6 +35,7 @@ $mobile-sm: 390px;
   --H3: 700 32px/112.5% var(--ff);
   --H4: 500 24px/180% var(--ff);
   --H5: 500 24px/150% var(--ff);
+  --Title_Accor: 500 20px/180% var(--ff);
   --Subtitle_1: 700 18px/190% var(--ff);
   --Subtitle_2: 600 16px/150% var(--ff);
   --Caption: 300 12px/200% var(--ff);
@@ -42,12 +43,16 @@ $mobile-sm: 390px;
   @media screen and (max-width: 992px) {
     --Body_text_14: 300 14rem/24rem var(--ff);
     --Body_text_18: 300 18rem/190% var(--ff);
+    --Button-send: 700 18rem / normal var(--ff);
+
     --Button: 700 14rem/28rem var(--ff);
-    --H1: 300 40rem/126% var(--ff);
-    --H2: 300 35rem/130% var(--ff);
-    --H3: 700 28rem/112.5% var(--ff);
-    --H4: 300 20rem/180% var(--ff);
-    --H5: 500 20rem/150% var(--ff);
+
+    --H1: 300 43rem/126% var(--ff);
+    --H2: 300 38rem/130% var(--ff);
+    --H3: 700 32rem/112.5% var(--ff);
+    --H4: 500 24rem/180% var(--ff);
+    --H5: 500 24rem/150% var(--ff);
+    --Title_Accor: 500 19rem/180% var(--ff);
     --Subtitle_1: 700 18rem/190% var(--ff);
     --Subtitle_2: 600 16rem/150% var(--ff);
     --Caption: 300 12rem/200% var(--ff);
