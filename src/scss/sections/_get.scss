@@ -1,12 +1,13 @@
 .get {
   margin-top: 240rem;
   @include tablet {
-    margin-top: 120rem;
+    margin-top: 130rem;
   }
   &__title {
     color: var(--Text-Primary);
     font: var(--H2);
     text-align: center;
+    margin-bottom: 32rem;
   }
 
   &__desc {
@@ -24,7 +25,8 @@
   }
 
   &__input {
-    max-width: 410rem;
+    width: 410px;
+    width: 100%;
     padding: 15px 45.97px 15px 33.545px;
     border-radius: 73px;
     background: #f8fafe;
@@ -34,6 +36,10 @@
 
     display: flex;
     align-items: center;
+
+    @include tablet {
+      max-width: 390rem;
+    }
 
     &::placeholder {
       color: var(--Outline-dark);

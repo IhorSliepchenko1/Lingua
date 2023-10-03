@@ -95,6 +95,11 @@
     img {
       width: 34px;
       height: 34px;
+
+      @include tablet {
+        width: 34rem;
+        height: 34rem;
+      }
     }
   }
 

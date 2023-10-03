@@ -1,8 +1,8 @@
 // ===== SCROLL CUSTOMIZE =====
 *::-webkit-scrollbar {
   width: 8px;
-  background-color: var(--Primary-200);
+  background-color: var(--Secondary);
 }
 * ::-webkit-scrollbar-thumb {
-  background-color: var(--Secondary);
+  background-color: var(--Primary-200);
 }

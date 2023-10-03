@@ -1,4 +1,8 @@
 .common {
+  @include tablet {
+    text-align: center;
+  }
+
   &__more {
     color: var(--Outline-dark);
     font: var(--Subtitle_1);
@@ -14,21 +18,25 @@
 .accordion-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 20rem;
 
   @media screen and (max-width: 1300px) {
     display: grid;
-    gap: 40rem;
+  }
+
+  @include tablet {
+    gap: 10rem;
   }
 }
 
 .accordion {
   display: grid;
-  gap: 20px;
-  @include tablet-small {
-    gap: 40rem;
+  gap: 20rem;
+  @include tablet {
     justify-content: center;
     align-items: center;
+
+    gap: 10rem;
   }
 }
 
@@ -37,8 +45,7 @@
   width: 610rem;
   height: 108rem;
   position: relative;
-
-  @include mobile {
+  @include tablet {
     width: 450rem;
   }
 
@@ -68,12 +75,18 @@
   justify-content: space-between;
   padding: 36rem 32rem 36rem 56rem;
 
-  @include tablet-small {
+  @include tablet {
     padding: 20rem 15rem 20rem 39rem;
   }
   &.active {
     border: 1px solid transparent;
     padding: 36rem 32rem 0 56rem;
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      padding: 20rem 18rem 0 56rem;
+    }
   }
 
   &__minus {
@@ -81,24 +94,18 @@
 
     &.active {
       display: block;
-      @media screen and (max-width: 1300px) {
-        padding-left: 25rem;
-      }
 
-      @include mobile {
-        width: 40px;
-        height: 40px;
+      @include tablet {
+        max-width: 34rem;
+        max-height: 34rem;
       }
     }
   }
 
   &__plus {
-    @media screen and (max-width: 1300px) {
-      padding-left: 20px;
-    }
-    @include mobile {
-      width: 44px;
-      height: 44px;
+    @include tablet {
+      max-width: 34rem;
+      max-height: 34rem;
     }
     &.active {
       display: none;
@@ -110,17 +117,21 @@
   display: none;
   position: absolute;
   top: 100%;
-  z-index: 1;
+  z-index: 10;
   border-radius: 0 0 40px 40px;
   background: var(--Primary-200);
+
+  transition: max-height 0.3s ease-in-out;
 
   padding: 0 36rem 36rem 56rem;
   width: 610rem;
   top: 80rem;
 
-  @include mobile {
-    top: 74px;
+  @include tablet {
+    top: 55px;
     width: 450rem;
+
+    padding: 0px 36rem 10rem 56rem;
   }
 
   &__desc {

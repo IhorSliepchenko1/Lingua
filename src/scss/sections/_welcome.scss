@@ -24,12 +24,14 @@
     max-width: 350px;
   }
   &__img {
+    max-width: 684px;
+    max-height: 690px;
     img {
       max-width: 684px;
       max-height: 690px;
     }
     @include tablet {
-      height: 450rem;
+      height: 400rem;
       img {
         height: 100%;
       }

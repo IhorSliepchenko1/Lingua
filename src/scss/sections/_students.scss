@@ -9,7 +9,6 @@
     display: block;
 
     margin-bottom: 140rem;
-
   }
 
   &__info {
@@ -35,10 +34,12 @@
   &__img {
     max-width: 502rem;
     max-height: 633rem;
+    border-radius: 60px;
 
     @include tablet-small {
       max-width: 402rem;
       max-height: 533rem;
+      border-radius: 60px;
     }
   }
 }
