@@ -1,6 +1,4 @@
 const gulp = require('gulp');
-
-// Tasks
 require('./gulp/dev.js');
 require('./gulp/prod.js');
 

@@ -45,6 +45,7 @@
   width: 610rem;
   height: 108rem;
   position: relative;
+
   @include tablet {
     width: 450rem;
   }
@@ -117,16 +118,15 @@
   display: none;
   position: absolute;
   top: 100%;
-  z-index: 10;
   border-radius: 0 0 40px 40px;
   background: var(--Primary-200);
-
-  transition: max-height 0.3s ease-in-out;
-
   padding: 0 36rem 36rem 56rem;
   width: 610rem;
   top: 80rem;
 
+  &.active {
+    z-index: 10;
+  }
   @include tablet {
     top: 55px;
     width: 450rem;

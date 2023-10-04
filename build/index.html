@@ -11,6 +11,7 @@
     />
     <meta
       name="title"
+      ЯТ
       content="Online Language Learning: Learn Spanish, French & More"
     />
     <meta charset="UTF-8" />
@@ -468,6 +469,8 @@
       </div>
     </div>
   </div>
+
+  <div class="active text-focus-in-1"></div>
 </section>
 
     <section class="get container">
@@ -599,43 +602,6 @@
     </script>
 
     <script>
-      const accordionContent = document.querySelectorAll(".accordion-content");
-
-      accordionContent.forEach((item, index) => {
-        let header = item.querySelector("header");
-        header.addEventListener("click", () => {
-          item.classList.toggle("is-open");
-
-          let description = item.querySelector(
-            ".accordion-content-description"
-          );
-          if (item.classList.contains("is-open")) {
-            // Scrollheight property return the height of
-            // an element including padding
-            description.style.height = `${description.scrollHeight}px`;
-            item.querySelector("i").classList.replace("fa-plus", "fa-minus");
-          } else {
-            description.style.height = "0px";
-            item.querySelector("i").classList.replace("fa-minus", "fa-plus");
-          }
-          // function to pass the index number of clicked header
-          removeOpenedContent(index);
-        });
-      });
-
-      function removeOpenedContent(index) {
-        accordionContent.forEach((item2, index2) => {
-          if (index != index2) {
-            item2.classList.remove("is-open");
-            let descrip = item2.querySelector(".accordion-content-description");
-            descrip.style.height = "0px";
-            item2.querySelector("i").classList.replace("fa-minus", "fa-plus");
-          }
-        });
-      }
-    </script>
-
-    <script>
       document.addEventListener("DOMContentLoaded", function () {
         const accordionItems = document.querySelectorAll(".accordion-item");
 
@@ -652,6 +618,9 @@
                 otherItem.classList.remove("active");
                 otherItem.querySelector(".accordion-content").style.display =
                   "none";
+                otherItem
+                  .querySelector(".accordion-content")
+                  .classList.remove("active");
                 otherItem
                   .querySelector(".accordion-header__minus")
                   .classList.remove("active");
@@ -670,21 +639,24 @@
             item.classList.toggle("active");
             if (item.classList.contains("active")) {
               content.style.display = "block";
+              content.classList.add("active");
               minus.classList.add("active");
               plus.classList.add("active");
               header.classList.add("active");
-              title.classList.add("active"); // Добавляем класс "active" к элементу .accordion-title при раскрытии
+              title.classList.add("active");
             } else {
               content.style.display = "none";
+              content.classList.remove("active");
               minus.classList.remove("active");
               plus.classList.remove("active");
               header.classList.remove("active");
-              title.classList.remove("active"); // Удаляем класс "active" у элемента .accordion-title при закрытии
+              title.classList.remove("active");
             }
           });
         });
       });
     </script>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   </body>
 </html>

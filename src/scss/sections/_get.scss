@@ -26,7 +26,6 @@
 
   &__input {
     width: 410px;
-    width: 100%;
     padding: 15px 45.97px 15px 33.545px;
     border-radius: 73px;
     background: #f8fafe;
@@ -38,7 +37,7 @@
     align-items: center;
 
     @include tablet {
-      max-width: 390rem;
+      max-width: 350rem;
     }
 
     &::placeholder {
